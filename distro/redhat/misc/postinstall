@@ -23,5 +23,6 @@ fi;
 /bin/chown -R apache.apache ${GRAPHITE_PATH}/webapp
 /bin/chown apache.apache ${GRAPHITE_PATH}/storage/graphite.db
 /bin/chown -R apache.apache ${GRAPHITE_PATH}/storage/log/webapp
+/bin/chown carbon.carbon ${GRAPHITE_PATH}/storage/whisper
 /bin/chown carbon.apache ${GRAPHITE_PATH}/storage
 /bin/chmod g+w ${GRAPHITE_PATH}/storage
