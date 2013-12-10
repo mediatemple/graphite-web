@@ -104,6 +104,10 @@ if USING_CPICKLE:
       return getattr(mod, name)
 
     @classmethod
+    def load(cls, fh):
+      return cls.loads(fh.read())
+
+    @classmethod
     def loads(cls, pickle_string):
       pickle_obj = pickle.Unpickler(StringIO(pickle_string))
       pickle_obj.find_global = cls.find_class
